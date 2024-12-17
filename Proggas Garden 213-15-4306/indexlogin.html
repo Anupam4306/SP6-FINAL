@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Progga's Garden</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleslogin.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form Section -->
+        <div class="login-section">
+            <h2 class="login-title">LOGIN</h2>
+            <div class="tab-container">
+                <button class="tab active" onclick="showUserLogin()">User Login</button>
+                <button class="tab" onclick="showAdminLogin()">Admin Login</button>
+            </div>
+            <form id="user-login-form" class="login-form">
+                <label for="user-id">User ID</label>
+                <input type="text" id="user-id" placeholder="Enter User ID" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Password" required>
+
+                <div class="options">
+                    <label><input type="checkbox" onclick="togglePassword()"> Show Password</label>
+                    <a href="#" class="forgot-password">Forgot Password</a>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+                <p class="signup-text">If have no Account</p>
+                <button type="button" class="signup-btn">Signup</button>
+            </form>
+
+            <!-- Admin Login Form -->
+            <form id="admin-login-form" class="login-form hidden">
+                <label for="admin-id">Admin ID</label>
+                <input type="text" id="admin-id" placeholder="Enter Admin ID" required>
+
+                <label for="admin-password">Password</label>
+                <input type="password" id="admin-password" placeholder="Enter Password" required>
+
+                <button type="submit" class="login-btn">Admin Login</button>
+            </form>
+        </div>
+
+        <!-- Logo and Slogan Section -->
+        <div class="logo-section">
+            <img src="logo.png" alt="Progga's Garden Logo" class="logo">
+            <p class="slogan">Freshness is our trust, love.</p>
+        </div>
+    </div>
+
+    <script src="scriptslogin.js"></script>
+</body>
+</html>
